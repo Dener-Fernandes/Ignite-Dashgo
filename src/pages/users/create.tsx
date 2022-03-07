@@ -2,7 +2,7 @@ import { Box, Button, Divider, Flex, Heading, HStack, SimpleGrid, VStack } from 
 
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Input } from "../../components/Form/Input";
-import { Pagination } from "../../components/Form/Pagination";
+import { Pagination } from "../../components/Pagination";
 
 import Header from "../../components/Header";
 import { Sidebar } from "../../components/Sidebar";

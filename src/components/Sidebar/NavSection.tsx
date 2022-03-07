@@ -1,20 +1,18 @@
 import { Box, Stack, Icon, Text } from "@chakra-ui/react";
 import Link from "next/link";
-import { RiDashboardLine, RiContactsLine } from "react-icons/ri";
+import { ReactNode } from "react";
 
-export function NavSection() {
+interface NavSectionProps {
+  title: string;
+  children: ReactNode;
+}
+
+export function NavSection({ title, children }: NavSectionProps) {
   return (
     <Box>
-      <Text fontWeight="bold" color="gray.400" fontSize="small">GERAL</Text>
+      <Text fontWeight="bold" color="gray.400" fontSize="small">{title}</Text>
       <Stack spacing="4" mt="8" align="stretch">
-        <Link display="flex" align="center">
-          <Icon as={RiDashboardLine} fontSize="20" />
-          <Text ml="4" fontWeight="medium">Dashboard</Text>
-        </Link>
-        <Link display="flex" align="center">
-          <Icon as={RiContactsLine} fontSize="20" />
-          <Text ml="4" fontWeight="medium">Usuários</Text>
-        </Link>
+        {children}
       </Stack>
     </Box>
   );
